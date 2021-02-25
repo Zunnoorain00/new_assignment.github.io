@@ -1,0 +1,2941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pana Cloud Assignment</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Baloo Bhai 2', cursive;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        body::-webkit-scrollbar {
+            width: .7em;
+        }
+
+        body::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 20px rgba(245, 201, 6, 0.3);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: orange;
+            outline: 1px solid orangered;
+        }
+
+        hr.style14 {
+            border: 0;
+            height: 2px;
+            background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        }
+
+        .top {
+            display: flex;
+            /* border: 1px solid red; */
+            height: 40px;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        #right-top {
+            display: flex;
+            /* border: 1px solid red; */
+            align-items: center;
+            justify-content: space-evenly;
+            width: 500px;
+        }
+
+        #left-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: rgb(48, 48, 48);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        #left-top p {
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4px;
+            margin-right: 1px;
+            color: rgb(184, 186, 188);
+        }
+
+        #left-top p:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        #right-top p {
+            font-size: 14px;
+            color: white;
+        }
+
+        #right-top button {
+            border: none;
+            outline: none;
+            background-color: rgb(162, 216, 76);
+            padding: 2px 22px;
+            margin-bottom: 2px;
+            border-radius: 3px;
+            margin-right: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        #right-top button:hover {
+            background-color: rgb(129, 194, 24);
+            color: white;
+        }
+
+
+        /* Main Navigation bar styling */
+        #navbar {
+            /* border: 1px solid red; */
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: center;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        #navbar a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            /* border: 1px solid red; */
+            padding: 20px 16px;
+        }
+
+        #navbar a:hover,
+        a:visited {
+            font-weight: bold;
+            border-bottom: 10px solid rgb(242, 194, 40);
+            font-size: 14px;
+            padding: 13px 16px;
+            cursor: pointer;
+        }
+
+        #right-navbar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            /* border: 1px solid blue; */
+            width: 792px;
+            height: 55px;
+            margin-right: 37px;
+        }
+
+        #left-navbar {
+            /* border: 1px solid blue; */
+            width: 100px;
+            height: 55px;
+            margin-left: 62px;
+        }
+
+        #left-navbar img {
+            height: 59px;
+            width: 143px;
+        }
+
+        /* Main Area */
+        #main-area {
+            height: 400px;
+            width: 100%;
+            background-image: url("./front-page/main-body-with.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 241px 0px;
+            position: relative;
+            color: white;
+            overflow: hidden;
+
+        }
+
+        #main-area h1 {
+            font-size: 70px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .btn {
+            border: none;
+            outline: rgb(242, 194, 40);
+            background-color: rgb(242, 194, 40);
+            padding: 2px 22px;
+            border-radius: 3px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 17px;
+            border-bottom: 2px solid orangered;
+            font-weight: bold;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .para-main {
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .dot-list {
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 47%;
+            bottom: 17%;
+            cursor: pointer;
+        }
+
+        .dot-new {
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-new:hover {
+            background-color: black;
+        }
+
+        .hoverDot {
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: .4;
+            cursor: pointer;
+
+        }
+
+        .newdotvalue {
+            background-color: white;
+            opacity: .4;
+        }
+
+
+        /* About Us */
+        #about-us {
+            height: 500px;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-image: url("../Components/front-page/main-icon.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        #about-us .head {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #about-us .head span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #about-us .head h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        #about-us p {
+            margin-top: 15px;
+            font-size: 12px;
+            color: black;
+        }
+
+        #left-about {
+            height: 350px;
+            width: 487px;
+            text-align: justify;
+            /* border: 1px solid red; */
+            margin-top: 27px;
+            margin-left: 79px;
+        }
+
+
+        /* Our Advantages Area */
+        #our-adv,
+        #our-ser,
+        #our-process {
+            height: 500px;
+            width: 100%;
+            /* border: 1px solid red; */
+            overflow: hidden;
+        }
+
+        #our-adv .head,
+        #our-ser .head,
+        #our-port .head,
+        #our-process .head {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #our-adv .head span,
+        #our-ser .head span,
+        #our-port .head span,
+        #our-process .head span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #our-adv .head h1,
+        #our-ser .head h1,
+        #our-port .head h1,
+        #our-process .head h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        #our-adv .head p,
+        #our-ser .head p,
+        #our-port .head p,
+        #our-process .head p {
+            margin-top: 0px;
+            font-size: 12px;
+            color: silver;
+        }
+
+        #adv-pics,
+        #process-box {
+            height: 336px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #adv-pics img,
+        #process-box img {
+            height: 150px;
+            width: 150px;
+        }
+
+        #adv-pics .box-pic,
+        #process-box .box-pix {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: -123px;
+            margin-right: -100px;
+            height: 300px;
+            width: 250px;
+        }
+
+
+        #adv-pics h3,
+        #process-box h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        #adv-pics p,
+        #process-box p {
+            font-size: 12px;
+            text-align: center;
+            color: silver;
+        }
+
+
+
+        /* Our Services */
+        #ser-pics {
+            height: 336px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        #ser-pics .ser-box-pic {
+            display: flex;
+            /* border: 1px solid red; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-left: -123px;
+            margin-right: -132px;
+            background-color: rgb(241, 242, 242);
+            height: 200px;
+            width: 250px;
+            position: relative;
+        }
+
+        #ser-pics h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        #ser-pics p {
+            font-size: 12px;
+            color: silver;
+        }
+
+        #ser-pics a {
+            color: rgb(162, 216, 76);
+
+            margin-top: 13px;
+        }
+
+        #ser-pics img {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            top: -34px;
+        }
+
+        /* Our Packages */
+        #packages {
+            height: 800px;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(240, 240, 240);
+        }
+
+        #head-packages {
+            height: 120px;
+            width: 70%;
+            /* border: 1px solid brown; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #head-packages h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        #head-packages span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #head-packages h2 {
+            font-size: 18px;
+            font-weight: 100;
+        }
+
+        #head-packages hr {
+            width: 10%;
+            border: 2px solid rgb(138, 206, 8);
+        }
+
+        #packages-boxes {
+            height: 550px;
+            width: 100%;
+            /* border: 1px solid purple; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+        }
+
+        #packages-box-2 {
+            position: absolute;
+            bottom: 75px;
+            z-index: 3;
+
+
+        }
+
+        #packages-box-1 {
+            position: absolute;
+            left: 170px;
+        }
+
+        #packages-box-3 {
+            position: absolute;
+            right: 170px;
+
+        }
+
+        #packages .box-main {
+            height: 450px;
+            width: 350px;
+            border: 2px solid grey;
+            background-color: white;
+        }
+
+        #packages p,
+        strong {
+            font-size: 14px;
+        }
+
+        #packages .box {
+            height: 400px;
+            width: 350px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .top-price-portion {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .top-price-portion h1 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        #packages .price-tag {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #packages .price-tag h5 {
+            font-size: 18px;
+            color: rgb(138, 206, 8);
+        }
+
+        #packages .price-tag h2 {
+            color: rgb(138, 206, 8);
+            font-size: 40px;
+        }
+
+        .btn-order {
+            outline: none;
+            border: none;
+            background-color: rgb(6, 133, 246);
+            padding: 10px 30px;
+            border-top: 1px solid blue;
+            border-right: 1px solid blue;
+            display: block;
+            margin: auto;
+            color: white;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+
+        }
+
+        .btn-order:hover {
+            background-color: rgb(36, 139, 230);
+        }
+
+        #view-packg-btn {
+            padding: 7px 80px;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(138, 206, 8);
+            border: 1px solid rgb(184, 207, 139);
+            cursor: pointer;
+        }
+
+        #view-packg-btn:hover {
+            background-color: rgb(158, 226, 32);
+            color: black;
+        }
+
+        /* portfolio portion */
+        #our-port {
+            height: 650px;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .port-flex {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+
+        #flex-nav ul {
+            display: flex;
+            height: 50px;
+            width: 900px;
+            /* border: 1px solid red; */
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #flex-nav ul li {
+            margin: 10px;
+            list-style: none;
+        }
+
+        #flex-nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #flex-nav ul li a:hover {
+            color: orange;
+        }
+
+        #flex-nav ul li #span-logo {
+            font-weight: bold;
+            color: orange;
+        }
+
+
+        /* grid styling of portfolio */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 0px;
+            padding: 0px 100px;
+
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* border: 1px solid black; */
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+        }
+
+        /* flex images */
+        #footer1-pic {
+            background-image: url("./front-page/footer-pic-1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer2-pic {
+            background-image: url("./front-page/footer-pic-2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer3-pic {
+            background-image: url("./front-page/footer-pic-3.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer4-pic {
+            background-image: url("./front-page/footer-pic-4.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer5-pic {
+            background-image: url("./front-page/footer-pic-5.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer6-pic {
+            background-image: url("./front-page/footer-pic-6.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer7-pic {
+            background-image: url("./front-page/footer-pic-7.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer8-pic {
+            background-image: url("./front-page/footer-pic-8.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer9-pic {
+            background-image: url("./front-page/footer-pic-9.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #footer10-pic {
+            background-image: url("./front-page/footer-pic-10.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #line-middle {
+            width: 70%;
+            display: block;
+            margin: auto;
+            position: relative;
+            border: 2px solid silver;
+            top: 132px;
+            z-index: -4;
+        }
+
+        .main-circle {
+            height: 150px;
+            width: 150px;
+            border: 4px solid silver;
+            border-radius: 100%;
+            position: relative;
+            background-color: white;
+            z-index: -4;
+        }
+
+        .main-circle .inner-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            background-color: orange;
+            width: 40px;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            top: -24px;
+            left: 52px;
+            border-radius: 100%;
+
+        }
+
+
+
+        /* main circle images */
+        #main-circle-2 {
+            /* background-image: url("./About\ Us/circle"); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #process-box .image {
+            display: flex;
+            height: 150px;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+
+        #process-box #image-1 img {
+            height: 80px;
+            width: 55px;
+        }
+
+        #process-box #image-2 img,
+        #process-box #image-6 img,
+        #process-box #image-5 img {
+            height: 70px;
+            width: 70px;
+        }
+
+        #process-box #image-3 img {
+            height: 70px;
+            width: 50px;
+        }
+
+        #process-box #image-4 img {
+            height: 50px;
+            width: 50px;
+            margin-right: 40px;
+
+        }
+
+        /* People About Us */
+        #people-about-us {
+            height: 600px;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: rgb(241, 242, 242);
+            overflow: hidden;
+        }
+
+        #people-about-us .head {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #people-about-us .head span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #people-about-us .head h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+
+        #people-about-us .head p {
+            margin-top: 0px;
+            font-size: 12px;
+            color: silver;
+        }
+
+        .people-about-flex {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+
+
+        /* grid styling of portfolio */
+        .people-grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 0px;
+            padding: 0px 100px;
+
+        }
+
+        .people-grid-container>div {
+            /* border: 1px solid black; */
+            text-align: center;
+            width: 600px;
+            height: 200px;
+            font-size: 30px;
+        }
+
+        #people-about-flex #people-box-1,
+        #people-about-flex #people-box-2,
+        #people-about-flex #people-box-3,
+        #people-about-flex #people-box-4 {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #people-grid img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #people-grid p {
+            font-size: 15px;
+            font-weight: normal;
+            text-align: left;
+
+        }
+
+        #people-grid h5 {
+            font-size: 18px;
+            text-align: left;
+
+        }
+
+        #people-about-flex #people-box-1,
+        #people-about-flex #people-box-3 {
+            border-right: 2px solid #888888;
+        }
+
+        #people-about-flex #people-box-3,
+        #people-about-flex #people-box-4 {
+            border-top: 2px solid #888;
+        }
+
+
+        /* Our Skills */
+        #progress-portion {
+            height: 600px;
+            /* border: 1px solid red; */
+        }
+
+        #progress-portion .head {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #progress-portion .head span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #progress-portion .head h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        #progress-portion .head p {
+            margin-top: 0px;
+            font-size: 12px;
+            color: silver;
+        }
+
+        #progress-wrap {
+            height: 400px;
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .main-progress-circle {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .outer-progress-circle {
+            /* border: 1px solid black; */
+            height: 225px;
+            width: 225px;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-image: linear-gradient(-60deg, #fff 50%, transparent 50%), linear-gradient(90deg, #ffbd1a 50%, #fff 50%);
+
+        }
+
+        .inner-progress-circle {
+
+            height: 200px;
+            width: 200px;
+            border: 4px solid #ffbd1a;
+            /* background-color: violet; */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .sub-progress-circle {
+
+            height: 170px;
+            width: 170px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #outer-progress-circle-1 {
+            margin-top: -50px;
+        }
+
+        #outer-progress-circle-2 {
+            background-image: linear-gradient(90deg, #ef4136 50%, transparent 50%), linear-gradient(40deg, #ef4136 50%, #fff 50%);
+        }
+
+        #outer-progress-circle-2 .inner-progress-circle {
+            border: 4px solid #ef4136;
+        }
+
+        #outer-progress-circle-2 h3 {
+            color: #ef4136;
+
+        }
+
+        #outer-progress-circle-3 {
+            background-image: linear-gradient(90deg, #8dc63f 50%, transparent 50%), linear-gradient(0deg, #8dc63f 50%, #fff 50%);
+
+        }
+
+        #outer-progress-circle-3 .inner-progress-circle {
+            border: 4px solid #8dc63f;
+        }
+
+        #outer-progress-circle-3 h3 {
+            color: #8dc63f;
+        }
+
+        #outer-progress-circle-4 {
+            background-image: linear-gradient(90deg, #212121 50%, transparent 50%), linear-gradient(-38deg, #212121 50%, #fff 50%);
+        }
+
+        #outer-progress-circle-4 .inner-progress-circle {
+            border: 4px solid #212121;
+        }
+
+        #outer-progress-circle-4 h3 {
+            color: #212121;
+        }
+
+        .percentage-heading {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffbd1a;
+        }
+
+        /* Contact Us Form Design */
+        #form-obj {
+            height: 350px;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: rgb(141, 198, 63);
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #form-obj h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        #form-obj p {
+            margin-top: 0px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+
+        #input-form {
+            width: 85%;
+            /* border: 1px solid red; */
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #form-obj input {
+            border: none;
+            outline: none;
+            padding: 15px 65px;
+            /* border: 1px solid black; */
+            border-radius: 5px;
+        }
+
+        #form-obj button {
+            border: none;
+            outline: rgb(242, 194, 40);
+            background-color: rgb(242, 194, 40);
+            padding: 12px 46px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 17px;
+            border-bottom: 2px solid orangered;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        /* Our Contact Portion */
+        #our-contact {
+            height: 640px;
+            width: 100%;
+            /* border: 1px solid red; */
+            overflow: hidden;
+        }
+
+        #our-contact .head {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #our-contact .head span {
+            font-weight: bold;
+            color: rgb(102, 142, 25);
+        }
+
+        #our-contact .head h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        #our-contact .head p {
+            margin-top: 0px;
+            font-size: 12px;
+            color: silver;
+        }
+
+        #our-contact .contact-box {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lower-div {
+            margin-top: 20px;
+            width: 50%;
+            height: 150px;
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #our-contact img {
+            margin-top: 40px;
+            height: 350px;
+            width: 100%;
+        }
+
+
+        /* Our Footer */
+        #footer-obj {
+            height: 400px;
+            width: 100%;
+            background-color: rgb(102, 142, 25);
+            /* border: 1px solid red; */
+            display: flex;
+            color: white;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #footer-obj img {
+            margin-top: 20px;
+            margin-left: -35px;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            width: 250px;
+            height: 300px;
+
+        }
+
+
+        #footer-obj h2 {
+            color: white;
+            font-weight: bold;
+        }
+
+        #footer-obj ul {
+            text-align: left;
+            padding: 0px;
+            margin-top: 30px;
+
+        }
+
+        #footer-obj ul li {
+            list-style: none;
+            margin-bottom: 15px;
+
+        }
+
+        #footer-obj ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: lighter;
+        }
+
+        #footer-obj ul li a:hover {
+            color: orange;
+        }
+
+        #footer2,
+        #footer3 {
+            border-right: 2px solid greenyellow;
+        }
+
+        #footer1 p,
+        #footer1 h2 {
+            text-align: left;
+        }
+
+        #footer1 h2 {
+            font-size: 18px;
+
+        }
+
+        #footer4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+
+        #footor-dot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px;
+            /* border: 1px solid red; */
+            /* margin-left: -40px; */
+        }
+
+        #footor-dot p {
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6px;
+            margin-right: 1px;
+            color: rgb(102, 142, 25);
+        }
+
+        #footor-dot p:hover {
+            color: orange;
+            cursor: pointer;
+        }
+
+        .dotf {
+            height: 25px;
+            width: 25px;
+            background-color: rgb(48, 48, 48);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+
+            /* Responsive styling of top and Navbar */
+            .top {
+                display: flex;
+                flex-direction: column;
+                height: 70px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+
+            #right-top {
+                width: 70%;
+                display: flex;
+                /* border: 1px solid red; */
+                align-items: center;
+                margin: 1px;
+                margin-left: 30px;
+                justify-content: space-around;
+            }
+
+            #left-top {
+                width: 70%;
+                /* border: 1px solid red; */
+                display: flex;
+                align-items: center;
+                margin-left: 8px;
+                margin-bottom: 10px;
+                justify-content: space-around;
+            }
+
+            .dot {
+                height: 20px;
+                width: 20px;
+                background-color: rgb(48, 48, 48);
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            #left-top p {
+                font-size: 9px;
+                font-weight: bold;
+                align-items: center;
+                margin-top: 3px;
+                color: rgb(184, 186, 188);
+            }
+
+            #left-top p:hover {
+                color: white;
+            }
+
+            #right-top p {
+                font-size: 7px;
+                font-weight: bold;
+                color: white;
+            }
+
+            #right-top button {
+                border: none;
+                background-color: rgb(162, 216, 76);
+                padding: 2px 22px;
+                margin-bottom: 2px;
+                border-radius: 3px;
+                margin-right: 20px;
+                font-size: 8px;
+                font-weight: bold;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+
+            #navbar {
+                height: 500px;
+                display: flex;
+                margin-top: 15px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+
+            }
+
+            #right-navbar {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                height: 300px;
+                width: 100%;
+                align-items: center;
+                margin-top: 23px;
+                margin-left: 40px;
+                /* border: 1px solid blue; */
+            }
+
+            #left-navbar {
+                /* border: 1px solid blue; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-left: 0px;
+                margin-top: -90px;
+                height: 112px;
+
+            }
+
+            #navbar a {
+                color: black;
+                text-decoration: none;
+                font-size: 10px;
+                /* border: 1px solid red; */
+                padding: 0px 30px;
+                border-bottom: .1px solid silver;
+            }
+
+
+            #navbar a:hover {
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 8px;
+                padding: 0px 100px;
+                border-bottom: 1px solid rgb(242, 194, 40);
+            }
+
+
+            #left-navbar img {
+                height: 96px;
+                width: 227px;
+                margin-top: 44px;
+            }
+
+
+            /* Main Portion -> Green Area */
+            #main-area {
+                margin-top: 130px;
+                width: 100%;
+                height: 300px;
+                background-image: url("./front-page/main-body-without.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                /* padding: 241px 0px; */
+                position: relative;
+                color: white;
+
+            }
+
+            #main-area h1 {
+                font-size: 30px;
+                font-weight: bolder;
+                color: white;
+            }
+
+            .btn {
+                border: none;
+                outline: rgb(242, 194, 40);
+                background-color: rgb(242, 194, 40);
+                padding: 2px 12px;
+                border-radius: 3px;
+                margin-top: 20px;
+                cursor: pointer;
+                font-size: 14px;
+                border-bottom: 2px solid orangered;
+                font-weight: bold;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+
+            .para-main {
+                /* border: 1px solid red; */
+                text-align: center;
+                font-size: 7px;
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .dot-list {
+                /* border: 1px solid red; */
+                position: absolute;
+                left: 47%;
+                bottom: 17%;
+            }
+
+            .dot-new {
+                height: 10px;
+                width: 10px;
+                margin: 5px;
+                background-color: white;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .newdotvalue {
+                background-color: white;
+                opacity: .4;
+            }
+
+            /* Our Advantages */
+            /* Our Advantages Area */
+            #our-adv,
+            #our-process {
+                margin-top: 30px;
+                height: 1050px;
+                width: 100%;
+                /* border: 1px solid red; */
+            }
+
+            #our-adv .head,
+            #our-ser .head,
+            #our-port .head,
+            #our-process .head {
+                width: 100%;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            #our-adv .head span,
+            #our-ser .head span,
+            #our-port .head span,
+            #our-process .head span {
+                font-weight: bold;
+                color: rgb(102, 142, 25);
+            }
+
+            #our-adv .head h1,
+            #our-ser .head h1,
+            #our-port .head h1,
+            #our-process .head h1 {
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 0px;
+            }
+
+            #our-adv .head p,
+            #our-ser .head p,
+            #our-port .head p,
+            #our-process .head p {
+                margin-top: 0px;
+                font-size: 6px;
+                color: silver;
+            }
+
+            #adv-pics,
+            #process-box {
+                height: 950px;
+                width: 100%;
+                /* border: 1px solid blue; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #adv-pics img,
+            #process-box img {
+                height: 70px;
+                width: 70px;
+            }
+
+            #adv-pics .box-pic,
+            #process-box .box-pix {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -123px;
+                margin-right: -100px;
+                height: 400px;
+                width: 100%;
+            }
+
+
+            #adv-pics h3,
+            #process-box h3 {
+                font-size: 18px;
+                margin-top: 10px;
+                font-weight: 100;
+                text-align: center;
+            }
+
+            #adv-pics p,
+            #process-box p {
+                font-size: 10px;
+                text-align: center;
+                color: silver;
+            }
+
+            /* About Us -> Responsive Code */
+            #about-us {
+                height: 350px;
+                width: 100%;
+                /* border: 1px solid red; */
+                background-image: url("../Components/front-page/main-icon.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #about-us .head {
+                margin-top: 30px;
+                text-align: center;
+            }
+
+            #about-us .head span {
+                font-weight: bold;
+                color: rgb(102, 142, 25);
+            }
+
+            #about-us .head h1 {
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 0px;
+            }
+
+            #about-us p {
+                margin-top: 15px;
+                font-size: 8px;
+                color: black;
+            }
+
+            #left-about {
+                display: block;
+
+                height: 250px;
+                width: 90%;
+                text-align: justify;
+                /* border: 1px solid red; */
+                margin: 0;
+                margin: auto;
+            }
+
+            #read-me-btn {
+                display: block;
+                margin: auto;
+                margin-top: 30px;
+            }
+
+            /* Our Services */
+            #our-ser {
+                margin-top: 30px;
+                height: 1200px;
+                width: 100%;
+                /* border: 1px solid red; */
+            }
+
+            #ser-pics {
+                height: 1100px;
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+            }
+
+            #ser-pics .ser-box-pic {
+                display: flex;
+                /* border: 1px solid red; */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                margin-left: -123px;
+                margin-right: -132px;
+                background-color: rgb(241, 242, 242);
+                height: 200px;
+                width: 250px;
+                position: relative;
+            }
+
+            #ser-pics h3 {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            #ser-pics p {
+                font-size: 12px;
+                color: silver;
+            }
+
+            #ser-pics a {
+                color: rgb(162, 216, 76);
+
+                margin-top: 13px;
+            }
+
+            #ser-pics img {
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top: -23px;
+            }
+
+
+
+            /* Our Portfolio */
+            #our-port {
+                height: 1000px;
+                width: 100%;
+                /* border: 1px solid red; */
+                background-color: black;
+            }
+
+            .port-flex {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+
+            #flex-nav ul {
+                display: flex;
+                height: 50px;
+                width: 100vw;
+                /* border: 1px solid red; */
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #flex-nav ul li {
+                padding: 0;
+                margin: 10px;
+                list-style: none;
+            }
+
+            #flex-nav ul li a {
+                font-size: 7px;
+                text-decoration: none;
+                color: white;
+            }
+
+            #flex-nav ul li a:hover {
+                color: orange;
+            }
+
+            #flex-nav ul li #span-logo {
+                font-weight: bold;
+                color: orange;
+            }
+
+
+            /* grid styling of portfolio */
+            .grid-container {
+                margin-top: 10px;
+                width: 100%;
+                height: 800px;
+                padding: 0;
+                /* border: 1px solid red; */
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 10px;
+                padding: -100;
+                /* padding: 0px 100px; */
+
+            }
+
+            .grid-container>div {
+                background-color: rgba(255, 255, 255, 0.8);
+                /* border: 1px solid black; */
+                text-align: center;
+                width: 150px;
+                height: 150px;
+                font-size: 30px;
+            }
+
+
+
+
+            /* Out Process Styling */
+            #our-process {
+                margin-top: 0px;
+                width: 100vw;
+                height: 1900px;
+                /* border: 1px solid purple; */
+            }
+
+            #our-process .head {
+                margin-top: 30px;
+                text-align: center;
+            }
+
+
+            #our-process .head span {
+                font-weight: bold;
+                color: rgb(102, 142, 25);
+            }
+
+            #our-process .head h1 {
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 0px;
+            }
+
+
+            #our-process .head p {
+                margin-top: 0px;
+                font-size: 7px;
+                color: silver;
+            }
+
+            #process-box {
+                height: 1800px;
+                width: 100vw;
+                /* border: 1px solid red; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #process-box img {
+                height: 150px;
+                width: 150px;
+            }
+
+            #process-box .box-pix {
+                display: flex;
+                flex-direction: column;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -123px;
+                margin-right: -100px;
+                height: 300px;
+                width: 250px;
+            }
+
+
+            #process-box h3 {
+                font-size: 18px;
+                margin-top: 10px;
+                font-weight: 100;
+                text-align: center;
+            }
+
+
+            #process-box p {
+                font-size: 12px;
+                text-align: center;
+                color: silver;
+            }
+
+            #line-middle {
+                display: none;
+            }
+
+
+            /* People About Us */
+            /* People Us Portion Responsive */
+            #people-about-us {
+                height: 700px;
+                width: 100%;
+                /* border: 1px solid red; */
+                background-color: rgb(241, 242, 242);
+                /* background-color: black; */
+            }
+
+            #people-about-us .head {
+                margin-top: 30px;
+                text-align: center;
+            }
+
+            #people-about-us .head span {
+                font-weight: bold;
+                color: rgb(102, 142, 25);
+            }
+
+            #people-about-us .head h1 {
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 0px;
+            }
+
+
+            #people-about-us .head p {
+                margin-top: 0px;
+                font-size: 6px;
+                color: silver;
+            }
+
+            .people-about-flex {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+
+
+            /* grid styling of portfolio */
+            .people-grid-container {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto;
+                grid-gap: 0px;
+                padding: 0;
+
+            }
+
+            .people-grid-container>div {
+                /* border: 1px solid black; */
+                text-align: center;
+                width: 300px;
+                height: 150px;
+                font-size: 30px;
+            }
+
+            #people-about-flex #people-box-1,
+            #people-about-flex #people-box-2,
+            #people-about-flex #people-box-3,
+            #people-about-flex #people-box-4 {
+                /* border: 1px solid red; */
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                border-bottom: 1px solid #888;
+            }
+
+            #people-grid img {
+                width: 70px;
+                height: 70px;
+            }
+
+            #people-grid p {
+                font-size: 8px;
+                font-weight: normal;
+                text-align: left;
+
+            }
+
+            #people-grid h5 {
+                font-size: 12px;
+                text-align: left;
+
+            }
+
+            #people-about-flex #people-box-1,
+            #people-about-flex #people-box-3 {
+                border-right: none;
+            }
+
+            #people-about-flex #people-box-3,
+            #people-about-flex #people-box-4 {
+                border-top: none;
+            }
+
+            #people-about-flex #people-box-4 {
+                border-bottom: none;
+            }
+
+            /* Our Skills Responsive */
+            #progress-portion {
+                height: 1500px;
+                /* border: 1px solid red; */
+            }
+
+            #progress-portion .head h1 {
+                font-weight: bold;
+                font-size: 40px;
+                margin-bottom: 0px;
+            }
+
+            #progress-portion .head p {
+                margin-top: 0px;
+                font-size: 7px;
+                color: silver;
+            }
+
+            #progress-wrap {
+                height: 1400px;
+                width: 100%;
+                /* border: 1px solid red; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            /* Form Responsive */
+            #form-obj {
+                height: 350px;
+                width: 100%;
+                /* border: 1px solid red; */
+                background-color: rgb(141, 198, 63);
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #input-form {
+                /* border: 1px solid red; */
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-flow: column wrap;
+                /* background-color: orange; */
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #form-obj h1 {
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 0px;
+                color: white;
+            }
+
+            #form-obj p {
+                margin-top: 0px;
+                font-size: 8px;
+                color: white;
+                text-align: center;
+            }
+
+            #form-obj input {
+                border: none;
+                outline: none;
+                padding: 10px 58px;
+                /* border: 1px solid black; */
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            #form-obj input::placeholder {
+                text-align: center;
+            }
+
+            #form-obj button {
+                border: none;
+                outline: rgb(242, 194, 40);
+                background-color: rgb(242, 194, 40);
+                padding: 5px 78px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 17px;
+                border-bottom: 2px solid orangered;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+
+            /* Our Contacts Responsive */
+            #our-contact {
+                height: 470px;
+                /* border: 1px solid red; */
+            }
+
+            #our-contact .head h1 {
+                font-weight: bold;
+                font-size: 40px;
+                margin-bottom: 0px;
+            }
+
+            #our-contact .head p {
+                margin-top: 0px;
+                font-size: 7px;
+                color: silver;
+            }
+
+
+
+            #our-contact .contact-box {
+                width: 100%;
+                height: 250px;
+                /* border: 1px solid red; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+
+            .lower-div {
+                width: 50%;
+                /* border: 1px solid blue; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #our-contact img {
+                margin-top: 0px;
+                height: 100px;
+                width: 100%;
+            }
+
+            #footer-obj {
+                height: 1300px;
+                width: 99%;
+                background-color: white;
+                /* border: 1px solid red; */
+                display: flex;
+                flex-flow: column wrap;
+                color: black;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+
+
+            #footer-obj img {
+                height: 100px;
+                width: 250px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+            }
+
+            .footer {
+                height: 315px;
+                width: 100vw;
+                /* border: 1px solid blue; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 5px;
+
+            }
+
+            h2 {
+                border-bottom: 1px solid white;
+            }
+
+            #footer-obj h2 {
+                color: black;
+                font-weight: bold;
+                font-size: 17px;
+            }
+
+            #footer2,
+            #footer3,
+            #footer1 {
+                border-right: none;
+                /* border-bottom: 2px solid greenyellow; */
+            }
+
+            #footer1,
+            #footer3 {
+                color: black;
+            }
+
+            #footer2,
+            #footer4 {
+                background-color: orange;
+            }
+
+            #footer1 p,
+            #footer1 h2 {
+                text-align: center;
+            }
+
+            #footer1 h2 {
+                font-size: 18px;
+
+            }
+
+            #footer-obj ul {
+                text-align: center;
+                padding: 0px;
+                margin-top: 30px;
+
+            }
+
+            #footor-dot {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 200px;
+                /* border: 1px solid red; */
+                margin-left: -5px;
+            }
+
+            #footor-dot p {
+                color: white;
+            }
+
+            #footer3 ul li a {
+                text-decoration: none;
+                color: black;
+                font-weight: lighter;
+                font-size: 10px;
+            }
+
+            #footer2 ul li a {
+                font-size: 10px;
+            }
+
+            #footer3 h2,
+            #footer1 h2 {
+                border-bottom: 1px solid black;
+                margin-top: 50px;
+            }
+
+            #footer2 h2 {
+                margin-top: 50px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top bar navigation -->
+    <div class="top" id="top">
+        <!-- Left Top Portion -->
+        <div id="left-top" class="left-top">
+            <div class="dot">
+                <p>f</p>
+            </div>
+            <div class="dot">
+                <p>tw</p>
+            </div>
+            <div class="dot">
+                <p>g+</p>
+            </div>
+            <div class="dot">
+                <p>in</p>
+            </div>
+            <div class="dot">
+                <p>tube</p>
+            </div>
+        </div>
+
+        <!-- Right Top Portion -->
+        <div id="right-top" class="right-top">
+            <div class="contact-info">
+                <div id="num-1">
+                    <p> +92(304) 386-6719</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <div id="num-2">
+                    <p>+92(304) 386-6719</p>
+                </div>
+            </div>
+
+            <div class="contact-button" id="contact-button">
+                <div id="contact-btn">
+                    <button>CALL ME BACK</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="left-navbar" id="left-navbar">
+            <img src="./logo-2.png" alt="Panacloud logo">
+        </div>
+        <div class="right-navbar" id="right-navbar">
+            <div class="link">
+                <a href="#">WHY US</a>
+            </div>
+            <div class="link">
+                <a href="#about-us">ABOUT</a>
+            </div>
+            <div class="link">
+                <a href="#our-ser">SERVICES</a>
+            </div>
+            <div class="link">
+                <a href="#our-port">PORTFOLIO</a>
+            </div>
+            <div class="link">
+                <a href="#our-process">PROCESS</a>
+            </div>
+            <div class="link">
+                <a href="#people-about-us">REVIEWS</a>
+            </div>
+            <div class="link">
+                <a href="#progress-portion">OUR SKILLS</a>
+            </div>
+            <div class="link">
+                <a href="#our-contact">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Body -->
+    <div class="main-area" id="main-area">
+        <div class="header">
+            <h1 id="header">WE ARE EXPERTS</h1>
+        </div>
+        <div class="para-main">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+        <button class="btn">READ MORE</button>
+
+
+    </div>
+
+    <div class="dot-list">
+        <div class="dot-new" id="dot-1">
+
+        </div>
+        <div class="dot-new newdotvalue" id="dot-2">
+
+        </div>
+        <div class="dot-new newdotvalue" id="dot-3">
+
+        </div>
+    </div>
+
+    <!-- our advantages -->
+    <div class="our-adv" id="our-adv">
+        <hr class="style14">
+        <div class="head">
+            <h1>OUR&nbsp;<span>ADVANTAGES</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+        <div class="adv-pics" id="adv-pics">
+            <div class="box-pic">
+                <img src="./front-page/adv-icon-1.png" alt="">
+                <h3>INNOVATION</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+            <div class="box-pic">
+                <img src="./front-page/adv-icon-2.png" alt="">
+                <h3>QUALITY</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+            <div class="box-pic">
+                <img src="./front-page/adv-icon-3.png" alt="">
+                <h3>EXPERIENCE</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+            <div class="box-pic">
+                <img src="./front-page/adv-icon-4.png" alt="">
+                <h3>HAPPY CLIENTS</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+            <div class="box-pic">
+                <img src="./front-page/adv-icon-5.png" alt="">
+                <h3>SUPPORT</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Us -->
+    <div id="about-us">
+        <hr class="style14">
+        <div class="head">
+            <h1>ABOUT&nbsp;<span>US</span></h1>
+        </div>
+        <div id="left-about">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque veritatis unde nesciunt similique
+                facere quibusdam reiciendis, ipsa ea cupiditate ipsam, deserunt placeat </p>
+            <p> dolore! Ducimus suscipit
+                tempora quo. Quasi perspiciatis voluptas eaque suscipit maxime, tempora, impedit omnis temporibus ab
+                accusamus iste amet praesentium eos nobis harum quidem ratione. Excepturi et ad ullam quaerat, vel
+                maxime numquam magnam aliquam quasi. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p>Corporis odio maiores ipsam atque ad error reprehenderit, sequi esse totam voluptatum natus repellat
+                provident perferendis! Explicabo odio eius at ullam laudantium a minima, hic nisi quasi voluptatem optio
+                tenetur, labore asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste nam
+                ducimus autem eveniet ipsa nesciunt exercitationem, mollitia a. Fugiat recusandae fuga qui facilis
+                explicabo, cum fugit aperiam? Odit, sunt? Lorem ipsum dolor sit amet consectetur adipisicing .</p>
+
+            <Button class="btn" id="read-me-btn">READ MORE</Button>
+        </div>
+    </div>
+
+
+
+    <!-- Our Services -->
+    <div class="our-ser" id="our-ser">
+        <hr class="style14">
+        <div class="head">
+            <h1>OUR&nbsp;<span>SERVICES</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+        <div class="ser-pics" id="ser-pics">
+            <div class="ser-box-pic">
+                <img src="./front-page/our-service.png" alt="">
+                <h3>WEB DESIGN</h3>
+                <p>Lorem ipsum dolor sit amet consectetur,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="ser-box-pic">
+                <img src="./front-page/our-service.png" alt="">
+                <h3>GRAPHIC DESIGN</h3>
+                <p>Lorem ipsum dolor sit amet consectetur,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="ser-box-pic">
+                <img src="./front-page/our-service.png" alt="">
+                <h3>BRANDING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+                <a href="">Read More</a>
+            </div>
+            <div class="ser-box-pic">
+                <img src="./front-page/our-service.png" alt="">
+                <h3>MARKETING</h3>
+                <p>Lorem ipsum dolor sit amet consectetur,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+                <a href="">Read More</a>
+            </div>
+        </div>
+    </div>
+    <hr class="style14">
+    <!-- Our Packages -->
+    <section id="packages">
+        <div id="head-packages">
+            <h1>Affordable <span>Web Design Packages</span></h1>
+            <h2>Experience the industry's best web design deals at 60% Discount with 100% Money Back Guarantee</h2>
+            <hr>
+        </div>
+
+        <!-- Price Tags Boxes -->
+        <div id="packages-boxes">
+            <div id="packages-box-1">
+                <div class="box-main">
+                    <div class="box">
+                        <div class="top-price-portion">
+                            <h1>WEB BASIC PREMIUM</h1>
+                        </div>
+                        <hr width="85%">
+                        <div class="price-tag">
+                            <h5>$</h5>
+                            <h2>859.00</h2>
+                        </div>
+                        <p class="discount-price">
+                            <del>$2148</del>&nbsp;&nbsp;
+                            <strong>60% off!</strong>
+                        <p>
+                        <p>Unlimited Pages Websites</p>
+                        <p>1 Design Concept</p>
+                        <p>1 Dedicated Designer</p>
+                        <p>Turn Around <sub>5</sub> Business Days</p>
+                        <p>10 Stock Photos</p>
+                        <p>Free On-Page SEO</p>
+                        <p>Free 1 Year Web Hosting</p>
+                        <strong>FREE CMS Integration</strong>
+                        <p><strong>100%</strong>&nbsp;&nbsp;Satisfaction Guaranteed</p>
+                    </div>
+                    <button class="btn-order">ORDER NOW</button>
+                </div>
+
+            </div>
+            <div id="packages-box-2">
+                <div class="box-main" style="border:3px solid rgb(36, 86, 119);">
+                    <div class="box">
+                        <div class="top-price-portion">
+                            <h1>WEB BASIC PLUS</h1>
+                            <h5 style="color:grey">Web Basic Plus</h5>
+                        </div>
+                        <hr width="85%">
+                        <div class="price-tag">
+                            <h5>$</h5>
+                            <h2>649.00</h2>
+                        </div>
+                        <p class="discount-price">
+                            <del>$1623</del>&nbsp;&nbsp;
+                            <strong>60% off!</strong>
+                        <p>
+                        <p>7 Pages Websites</p>
+                        <p>1 Design Concept</p>
+                        <p>1 Dedicated Designer</p>
+                        <p>Turn Around <sub>5</sub> Business Days</p>
+                        <p>7 Stock Photos</p>
+                        <p>Free On-Page SEO</p>
+                        <p>W<sub>3</sub>C Certified HTML</p>
+                        <strong>Add CMS for $299</strong>
+                        <p><strong>100%</strong>&nbsp;&nbsp;Satisfaction Guaranteed</p>
+                    </div>
+                    <button class="btn-order">ORDER NOW</button>
+                </div>
+
+            </div>
+            <div id="packages-box-3">
+                <div class="box-main">
+                    <div class="box">
+                        <div class="top-price-portion">
+                            <h1>WEB BASIC PREMIUM</h1>
+                        </div>
+                        <hr width="85%">
+                        <div class="price-tag">
+                            <h5>$</h5>
+                            <h2>499.00</h2>
+                        </div>
+                        <p class="discount-price">
+                            <del>$1248</del>&nbsp;&nbsp;
+                            <strong>60% off!</strong>
+                        <p>
+                        <p>5 Pages Websites</p>
+                        <p>1 Design Concept</p>
+                        <p>1 Dedicated Designer</p>
+                        <p>Turn Around <sub>5</sub> Business Days</p>
+                        <p>4 Stock Photos</p>
+                        <p>Free On-Page SEO</p>
+                        <p>Free 1 Year Web Hosting</p>
+                        <strong>FREE CMS Integration</strong>
+                        <p><strong>100%</strong>&nbsp;&nbsp;Satisfaction Guaranteed</p>
+                    </div>
+                    <button class="btn-order">ORDER NOW</button>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="btn-order" id="view-packg-btn">View All Packages</button>
+    </section>
+
+    <!-- Our Portfolio -->
+    <div class="our-ser our-port" id="our-port">
+        <div class="head">
+            <h1 style="color: white;">OUR&nbsp;<span>PORFOLIO</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+
+        <!-- Portfolio flex -->
+        <div class="port-flex" id="port-flex">
+
+            <!-- portfolio links -->
+            <div class="flex-nav" id="flex-nav">
+                <ul>
+                    <li><a href="">WEB DESIGN</a></li>
+                    <li><a href="">GRAPHIC DESIGN</a></li>
+                    <li><a href="">BRANDING</a></li>
+                    <li><a href="" id="span-logo">LOGO</a></li>
+                    <li><a href="">MARKETING</a></li>
+                    <li><a href="">ADVERTISEMENT</a></li>
+                </ul>
+            </div>
+
+            <div class="port-grid" id="port-grid">
+                <div class="grid-container">
+                    <div id="footer1-pic"></div>
+                    <div id="footer2-pic"></div>
+                    <div id="footer3-pic"></div>
+                    <div id="footer4-pic"></div>
+                    <div id="footer5-pic"></div>
+                    <div id="footer6-pic"></div>
+                    <div id="footer7-pic"></div>
+                    <div id="footer8-pic"></div>
+                    <div id="footer9-pic"></div>
+                    <div id="footer10-pic"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Our Process -->
+    <div class="our-process" id="our-process">
+        <div class="head">
+            <h1>OUR&nbsp;<span>PROCESS</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+        <hr id="line-middle">
+        <div class="process-box" id="process-box">
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-1">
+                    <div class="inner-circle"> 1</div>
+                    <div class="image" id="image-1">
+                        <img src="./About Us/Circle-1.png" alt="">
+                    </div>
+
+                </div>
+                <h3>REQUEST CALL</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-2">
+                    <div class="inner-circle"> 2</div>
+                    <div class="image" id="image-2">
+                        <img src="./About Us/Circle-2.png" alt="">
+                    </div>
+                </div>
+                <h3>CONSULTATION</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-3">
+                    <div class="inner-circle"> 3</div>
+                    <div class="image" id="image-3">
+                        <img src="./About Us/Circle-3.png" alt="">
+                    </div>
+                </div>
+                <h3>PLANNING</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-4">
+                    <div class="inner-circle"> 4</div>
+                    <div class="image" id="image-4">
+                        <img src="./About Us/Circle-4.png" alt="">
+                    </div>
+                </div>
+                <h3>WORK PROCESS</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-5">
+                    <div class="inner-circle"> 5</div>
+                    <div class="image" id="image-5">
+                        <img src="./About Us/Circle-5.png" alt="">
+                    </div>
+                </div>
+                <h3>CORRECTING</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+            <div class="box-pic">
+                <div class="main-circle" id="main-circle-6">
+                    <div class="inner-circle"> 6</div>
+                    <div class="image" id="image-6">
+                        <img src="./About Us/Circle-6.png" alt="">
+                    </div>
+                </div>
+                <h3>DELIVER</h3>
+                <p>Lorem ipsum dolor sit amet ,</p>
+                <p>adipisicing elit. Earum, odit.</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- People About Us -->
+    <div class="our-ser people-about-us" id="people-about-us">
+        <hr class="style14">
+        <div class="head">
+            <h1 style="color:black;">PEOPLE&nbsp;<span>ABOUT US</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+
+        <!-- Portfolio flex -->
+        <div class="people-about-flex" id="people-about-flex">
+
+            <div class="people-grid" id="people-grid">
+                <div class="people-grid-container">
+                    <div id="people-box-1">
+                        <img src="./About Us/people-icon.png" alt="">
+                        <div class="inner-portion">
+                            <h5>JOHN DOE</h5>
+                            <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Excepturi delectus sunt soluta quod in assumenda </p>
+                            <p>repudiandae fuga quae nostrum reiciendis.</p>
+                        </div>
+                    </div>
+                    <div id="people-box-2">
+                        <img src="./About Us/people-icon.png" alt="">
+                        <div class="inner-portion">
+                            <h5>JOHN DOE</h5>
+                            <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Excepturi delectus sunt soluta quod in assumenda </p>
+                            <p>repudiandae fuga quae nostrum reiciendis.</p>
+                        </div>
+                    </div>
+                    <div id="people-box-3">
+                        <img src="./About Us/people-icon.png" alt="">
+                        <div class="inner-portion">
+                            <h5>JOHN DOE</h5>
+                            <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Excepturi delectus sunt soluta quod in assumenda </p>
+                            <p>repudiandae fuga quae nostrum reiciendis.</p>
+                        </div>
+                    </div>
+                    <div id="people-box-4">
+                        <img src="./About Us/people-icon.png" alt="">
+                        <div class="inner-portion">
+                            <h5>JOHN DOE</h5>
+                            <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Excepturi delectus sunt soluta quod in assumenda </p>
+                            <p>repudiandae fuga quae nostrum reiciendis.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Our Skills -->
+    <div class="our-ser" id="progress-portion">
+        <hr class="style14">
+        <div class="head">
+            <h1>OUR&nbsp;<span>SKILLS</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+        <div id="progress-wrap">
+            <div class="main-progress-circle">
+                <div class="outer-progress-circle" id="outer-progress-circle-1">
+                    <div class="inner-progress-circle">
+                        <div class="sub-progress-circle">
+                            <h3 class="percentage-heading">45%</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main-progress-circle">
+                <div class="outer-progress-circle" id="outer-progress-circle-2">
+                    <div class="inner-progress-circle">
+                        <div class="sub-progress-circle">
+                            <h3 class="percentage-heading">60%</h3>
+                        </div>
+                    </div>
+                </div>
+                <h3>SEO & ADDS</h3>
+            </div>
+
+
+            <div class="main-progress-circle">
+                <div class="outer-progress-circle" id="outer-progress-circle-3">
+                    <div class="inner-progress-circle">
+                        <div class="sub-progress-circle">
+                            <h3 class="percentage-heading">75%</h3>
+                        </div>
+                    </div>
+                </div>
+                <h3>BRANDING</h3>
+            </div>
+
+            <div class="main-progress-circle">
+                <div class="outer-progress-circle" id="outer-progress-circle-4">
+                    <div class="inner-progress-circle">
+                        <div class="sub-progress-circle">
+                            <h3 class="percentage-heading"> 80%</h3>
+                        </div>
+                    </div>
+                </div>
+                <h3>WEB DESIGN</h3>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Contact Us Form -->
+    <div class="form-obj" id="form-obj">
+        <hr class="style14">
+        <div class="heading-class">
+            <h1>START YOUR OWN PROJECT</h1>
+        </div>
+
+        <div class="input-form" id="input-form">
+            <input type="text" placeholder="YOUR NAME">
+            <input type="email" name="" id="" placeholder="YOUR EMAIL">
+            <input type="tel" name="" id="" placeholder="YOUR PHONE">
+            <button>SEND REQUEST</button>
+        </div>
+
+        <div class="form-para">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque libero eligendi omnis possimus fugiat
+                sequi!</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+
+    <!-- Our Contact -->
+    <div class="our-ser" id="our-contact">
+        <hr class="style14">
+        <div class="head">
+            <h1>OUR&nbsp;<span>CONTACTS</span></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur aut excepturi molestiae sed?
+                Molestias, impedit.</p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, omnis.</p>
+        </div>
+
+        <div class="contact-box">
+            <div class="upper div">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, inventore voluptas. Pariatur et
+                    illo a?</p>
+            </div>
+            <div class="lower-div">
+                <p>+92(304)386-6719</p>
+                <p>+92(317)011-3001</p>
+                <p>info@website.com</p>
+            </div>
+
+        </div>
+
+        <img src="./footer-map.png" alt="">
+
+    </div>
+
+
+    <!-- Our Footer -->
+    <div class="footer-obj" id="footer-obj">
+        <hr class="style14">
+        <div class="footer" id="footer1">
+            <img src="./logo-2.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A accusantium tenetur nisi voluptas, vero
+                recusandae sequi veritatis eligendi atque quae!</p>
+            <h2>&copy; Panacloud 2019</h2>
+        </div>
+        <div class="footer" id="footer2">
+            <h2>SERVICES</h2>
+            <ul>
+                <li><a href="#">Lorem Ispum</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem Ispum Dolar</a></li>
+                <li><a href="#">Lorem Ispum</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem Ispum Dolar</a></li>
+                <li><a href="#">Lorem Ispum Dolar</a></li>
+            </ul>
+        </div>
+        <div class="footer" id="footer3">
+            <h2>USEFUL LINKS</h2>
+            <ul>
+                <li><a href="#">Lorem Ispum</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem Ispum Dolar</a></li>
+                <li><a href="#">Lorem Ispum</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem Ispum Dolar</a></li>
+
+            </ul>
+        </div>
+        <div class="footer" id="footer4">
+            <h2>CONTACTS</h2>
+            <p>+92(304)386-6719</p>
+            <p>+92(317)011-3001</p>
+            <p>info@website.com</p>
+            <br>
+            <h2>FOLLOW US</h2>
+            <div id="footor-dot" class="footor-dot">
+                <div class="dotf">
+                    <p>f</p>
+                </div>
+                <div class="dotf">
+                    <p>tw</p>
+                </div>
+                <div class="dotf">
+                    <p>g+</p>
+                </div>
+                <div class="dotf">
+                    <p>in</p>
+                </div>
+                <div class="dotf">
+                    <p>tube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let dot_1 = document.getElementById("dot-1");
+    let dot_2 = document.getElementById("dot-2");
+    let dot_3 = document.getElementById("dot-3");
+
+    document.getElementById("dot-1").addEventListener("click", function click1() {
+        document.getElementById("header").innerText = "WE ARE EXPERTS";
+        dot_1.classList.remove("dot-new");
+        dot_1.className = "dot-new";
+
+        dot_2.classList.remove("dot-new");
+        dot_2.classList.remove("newdotvalue");
+        dot_2.className = "hoverDot";
+
+        dot_3.classList.remove("dot-new");
+        dot_3.classList.remove("newdotvalue");
+        dot_3.className = "hoverDot";
+
+
+    });
+
+
+    // <div class="dot-new newdotvalue" id="dot-2">
+    document.getElementById("dot-2").addEventListener("click", function click1() {
+        document.getElementById("header").innerText = "REAL DEVELOPERS";
+        document.getElementById("dot-2").classList.remove("newdotvalue");
+
+        dot_2.classList.remove("dot-new");
+        dot_2.classList.remove("newdotvalue");
+        dot_2.className = "dot-new";
+
+        dot_1.classList.remove("dot-new");
+        dot_1.classList.remove("newdotvalue");
+        dot_1.className = "hoverDot";
+
+        dot_3.classList.remove("dot-new");
+        dot_3.classList.remove("newdotvalue");
+        dot_3.className = "hoverDot";
+
+
+    });
+
+
+    document.getElementById("dot-3").addEventListener("click", function click1() {
+        document.getElementById("header").innerText = "JS EXPERTS";
+        dot_3.classList.remove("dot-new");
+        dot_3.classList.remove("newdotvalue");
+        dot_3.className = "dot-new";
+
+        dot_2.classList.remove("dot-new");
+        dot_2.classList.remove("newdotvalue");
+        dot_2.className = "hoverDot";
+
+        dot_1.classList.remove("dot-new");
+        dot_1.classList.remove("newdotvalue");
+        dot_1.className = "hoverDot";
+    });
+
+</script>
+
+</html>
